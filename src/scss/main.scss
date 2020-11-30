@@ -1,0 +1,488 @@
+$break-point1: 1200px;
+$break-point2: 1048px;
+$break-point3: 950px;
+$break-point4: 860px;
+$break-point5: 760px;
+$break-point6: 690px;
+$break-point7: 620px;
+$break-point8: 520px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-image: url('./../img/bg.jpg');
+    background-position: 30% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 920px;
+    @media only screen and (max-width: $break-point5) {
+        height: 720px;
+    }
+    @media only screen and (max-width: $break-point8) {
+        height: 650px;
+    }
+    
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    @media only screen and (max-width: $break-point1) {
+        max-width: 1000px;
+    }
+    @media only screen and (max-width: $break-point2) {
+        max-width: 900px;
+    }
+    @media only screen and (max-width: $break-point3) {
+        max-width: 850px;
+    }
+   /* @media only screen and (max-width: $break-point4) {
+        max-width: 750px;
+    }
+    @media only screen and (max-width: $break-point5) {
+        max-width: 600px;
+    }*/
+}
+.button {
+    padding: 0.8em 2em;
+    outline: none;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #75ACFF;
+    color: #75ACFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.2s;
+    
+    &:hover {
+        background-color: #F5841F;
+        color: white;
+        border-color: #F5841F;
+        cursor: pointer;
+    }
+}
+.header {
+    .container {
+        .header__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            .burger, .phone {
+                display: none;
+            }
+            @media only screen and (max-width: $break-point4) {
+                max-width: 750px;
+                margin: 0 auto;
+            }
+            @media only screen and (max-width: $break-point5) {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            svg {
+                display: block;
+            }
+            @media only screen and (max-width: $break-point7) {
+            justify-content: space-around;
+            .burger, .phone {
+                display: block;
+            }
+            }
+
+        }
+        .header__ul {
+            display: flex;
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            width: 50%;
+            margin-left: auto;
+            margin-right: 2em;
+            justify-content: space-between;
+            @media only screen and (max-width: $break-point7) {
+               display: none;
+                  
+                }
+            li {
+                .date {
+                    color: rgb(255, 134, 134);
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    @media only screen and (max-width: 1200px) {
+                        display: none;
+                    }
+                }
+                .type {
+                    color: rgb(255, 255, 255);
+                    font-weight: 100;
+                    text-transform: lowercase;
+                    @media only screen and (max-width: 1200px) {
+                        display: none;
+                    }
+                  
+                }
+                .name{
+                    color: #75ACFF;;
+                    text-transform: uppercase;
+                    font-weight: bold; 
+                    @media only screen and (max-width: 1200px) {
+                        display: none;
+                    }
+                }
+            }
+            .number {
+                color: white;
+                @media only screen and (max-width: $break-point7) {
+                
+                }
+            }
+          
+            .button {
+                @media only screen and (max-width: $break-point7) {
+                    display: none;
+                }
+            }
+           
+        }  
+        .top {
+            @media only screen and (max-width: $break-point7) {
+                display: none;
+            }
+        } 
+      
+        .person_wraper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        &__person {
+            margin-right: auto;
+            position: relative;
+            height: 800px;
+            width: 100%;
+            max-width: 600px;
+            @media only screen and (max-width: 1200px) {
+                width: 50%;
+            }
+            &--top-left {
+                position: absolute;
+                border-top: 3px solid #75ACFF;
+                border-left: 3px solid #75ACFF;
+                border-bottom: 3px solid #75ACFF;
+                width: 80%;
+                height: 90%;
+                top: 7%;
+                @media only screen and (max-width: $break-point5) {
+                    height: 77.3%;
+                }
+                @media only screen and (max-width: $break-point8) {
+                    height: 66.8%;
+                }
+            }
+            &--top-right {
+                position: absolute;
+                border-top: 3px solid #75ACFF;
+                border-right: 3px solid #75ACFF;
+                width: 50%;
+                height: 24.5%;
+                top: 7%;
+                right: -10%;
+                @media only screen and (max-width: $break-point5){
+                    right: -60%;
+                    width: 100%;
+                    height: 33.3%;
+                }
+                @media only screen and (max-width: $break-point8) {
+                    height: 23.9%;
+                }
+            }
+            &--bottom-right {
+                position: absolute;
+                right: -10%;
+                width: 100%;
+                max-width: 500px;
+                height: 26%;
+                bottom: 18px;
+                z-index: 100;
+                border-bottom: 3px solid #75ACFF;
+                border-right: 3px solid #75ACFF;
+                @media only screen and (max-width: $break-point1) {
+                   height: 25.6%;
+                }
+                @media only screen and (max-width: $break-point4) {
+                    width: 105%;
+                }
+                @media only screen and (max-width: $break-point5) {
+                    right: -60%;
+                    width: 200%;
+                    height: 16.5%;
+                    bottom: 120px;
+                }
+                @media only screen and (max-width: $break-point8) {
+                    bottom: 204px;
+                }
+            }
+            &__face {
+                top: -2%;
+                position: absolute;
+                right: -20%;
+                @media only screen and (max-width: $break-point1) {
+                    right: -40%;
+                }   
+                @media only screen and (max-width: $break-point5) {
+                    right: -80%;
+                   width: 500px;
+                }
+                @media only screen and (max-width: $break-point8) {
+                    width: 450px;
+                }
+                
+
+            }
+            .person__prof, .person__name, .person__info {
+                padding: 0;
+                @media only screen and (max-width: $break-point3) {
+                    display: none;
+                }
+                
+            }
+            .person__prof {
+                margin-left: 10%;
+               margin-top: 5em;
+               color: white;
+               text-transform: lowercase;
+               letter-spacing: 0.5em;
+               font-size: 1.3em;
+               margin-bottom: 5px;
+             
+            }
+            .person__name {
+                margin-left: 10%;
+                color: #F5841F;
+                font-size: 2em;
+                margin-top: 0;
+            }
+            .person__info {
+                padding-left: 10%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                border-top: 3px solid #75ACFF;
+                border-bottom: 3px solid #75ACFF;
+                width: 100%;
+                max-width: 280px;
+                font-weight: lighter;
+                color: white;
+                margin-top: -20px;
+                @media only screen and (max-width: $break-point2) {
+                    max-width: 200px;
+                }
+            }
+         
+          
+            .rectangle {
+                position: absolute;
+                left: 0;
+                top: 8%;
+                z-index: 10;
+            }
+          
+        }
+        .desc {
+            border-top: 2px solid black;
+            padding-top: 3em;
+            margin-top: -3.2em;
+            border-color: #75ACFF;
+            border-bottom:  2px solid #75ACFF;
+            position: absolute;
+            width: 600px;
+            right: 0;
+            height: 267px;
+            top: 42%;
+            @media only screen and (max-width: $break-point1) {
+                max-width: 500px;
+            }
+            @media only screen and (max-width: $break-point5) {
+                max-width: 600px;
+                height: 160px;
+                max-width: 450px;
+                top: 50%;
+            }
+            @media only screen and (max-width: $break-point8) {
+                max-width: 300px;
+                top: 40%;
+            }
+            & > p {
+                color: #75ACFF;
+                font-size: 1em;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                margin: 0;
+                @media only screen and (max-width: $break-point8) {
+                    font-size: 1em;
+                }
+            }
+            h1 {
+                margin-top: 0.3em;
+                color: white;
+                font-size: 4em;
+                @media only screen and (max-width: $break-point5) {
+                    font-size: 3em;
+                }
+                @media only screen and (max-width: $break-point8) {
+                    font-size: 2em;
+                }
+                span {
+                    font-weight: 100;
+                }
+            }
+         
+            .top-rectangle {
+                position: absolute;
+                top: 312px;
+                left: 50%;
+                width: 611px;
+            }
+            .buttons {
+                position: absolute;
+                right: 15%;
+                bottom: -20%;
+                display: flex;
+                @media only screen and (max-width: $break-point1) {
+                    right: 5%;
+                }
+                @media only screen and (max-width: $break-point2) {
+                    right: 0;
+                }
+                @media only screen and (max-width: $break-point1) {
+                    flex-direction: column;
+                    align-items: center;
+                    left: 0;
+                    justify-content: center;
+                    bottom: -40%;
+                    .button {
+                        margin-top: 10px;
+                        width: 220px;
+                        margin-right: 0;
+                    }
+                }
+                @media only screen and (max-width: $break-point4) {
+                   left: 100px;
+                }
+                @media only screen and (max-width: $break-point5) {
+                   left: -50%;
+                   bottom: -60%;
+                }
+            }
+            .know-more {
+                margin-right: 10px;
+
+            }
+            .video {
+                width: 220px;
+             
+                display: flex;
+                align-items: center; 
+                justify-content: space-between;
+                 P {
+                     margin: 0;;
+                 }
+                svg {
+                    fill: #75ACFF;
+                    polygon {
+                        fill: white;
+                        stroke: white;
+                    }
+                }
+            }
+           
+        }
+     
+    }
+}
+
+.sources {
+    
+    background-image: url('./../img/map_istochniki.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: center;
+    position: relative;
+    .background {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(228, 233, 240, 0.514);
+        @media only screen and (max-width: $break-point4) {
+            width: 100%;
+            height: 30%;
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: $break-point4) {
+            flex-direction: column;
+        }
+        .title__wrap {
+            max-width: 50%;
+            margin-top: 4em;
+            @media only screen and (max-width: $break-point4) {
+                text-align: left;
+            }
+        }
+        &__subtitle {
+            color: #75ACFF;
+            font-weight: bold;
+            margin: 0;
+        }
+        &__title {
+            font-size: 2em;
+            margin-top: 0.5em;
+        }
+        &__chanels {
+            margin-top: 4em;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 50%;
+            position: relative;
+            @media only screen and (max-width: $break-point3) {
+                max-width: 400px;
+                width: 400px;
+            }
+            .rectangle {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 12%;
+                left: -12%;
+                z-index: 0;
+                @media only screen and (max-width: $break-point1) {
+                   transform: rotate(90deg);
+                   width: 120%;
+                   height: 62%;
+                   left: 1px;
+                   top: 57px;
+                }
+                @media only screen and (max-width: $break-point3) {
+                    display: none;
+                }
+            }
+            .chanel {
+                padding: 3em 1.4em ;
+                background-color: #F2F4F9;
+                margin: 0.8em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1 1 100px;
+                height: 100px;
+                z-index: 10;
+            }
+        }
+    }
+}
