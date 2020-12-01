@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header__top">
-          <span>
+          <span class="burger">
             <svg
               width="28"
               height="18"
               viewBox="0 0 28 18"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="burger"
+              
             >
               <rect width="28" height="2" fill="white" />
               <rect y="8" width="28" height="2" fill="white" />
@@ -33,15 +34,23 @@
             height="28"
             viewBox="0 0 28 28"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg" 
+            xmlns="http://www.w3.org/2000/svg"
             class="phone"
           >
             <circle cx="14" cy="14" r="14" fill="#75ACFF" />
 
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.87998 7.34234C8.2318 6.79728 7.57399 6.46711 6.93376 7.01135L6.55147 7.34028C6.27177 7.57905 5.75171 8.6947 3.74101 6.42059C1.73073 4.14936 2.92702 3.79573 3.20714 3.55902L3.59153 3.22967C4.2284 2.6842 3.98806 1.99752 3.52872 1.29067L3.25153 0.862526C2.7901 0.157321 2.28763 -0.305817 1.64908 0.238833L1.30405 0.535241C1.02183 0.737375 0.232963 1.39441 0.0416073 2.64262C-0.18869 4.14031 0.537793 5.85536 2.20221 7.73714C3.86454 9.61974 5.49211 10.5654 7.03384 10.5489C8.31513 10.5353 9.08893 9.85934 9.33095 9.61357L9.67723 9.31675C10.3141 8.77251 9.91841 8.21839 9.26981 7.67209L8.87998 7.34234Z" fill="white"/>
-                </svg>
-                
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.87998 7.34234C8.2318 6.79728 7.57399 6.46711 6.93376 7.01135L6.55147 7.34028C6.27177 7.57905 5.75171 8.6947 3.74101 6.42059C1.73073 4.14936 2.92702 3.79573 3.20714 3.55902L3.59153 3.22967C4.2284 2.6842 3.98806 1.99752 3.52872 1.29067L3.25153 0.862526C2.7901 0.157321 2.28763 -0.305817 1.64908 0.238833L1.30405 0.535241C1.02183 0.737375 0.232963 1.39441 0.0416073 2.64262C-0.18869 4.14031 0.537793 5.85536 2.20221 7.73714C3.86454 9.61974 5.49211 10.5654 7.03384 10.5489C8.31513 10.5353 9.08893 9.85934 9.33095 9.61357L9.67723 9.31675C10.3141 8.77251 9.91841 8.21839 9.26981 7.67209L8.87998 7.34234Z"
+                fill="white"
+              />
+            </svg>
           </svg>
 
           <ul class="header__ul">
@@ -75,24 +84,27 @@
             <h1><span>Как создать</span> пассивный доход?</h1>
             <div class="buttons">
               <button class="button know-more">Узнать больше</button>
-              <button class="button video">
-                <p>Смотерть видео</p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-play-circle"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                </svg>
-              </button>
+              <form action="https://www.youtube.com/channel/UCLFhUH3tc6dCMKj4aO7omPg" target="_blank">
+                <button class="button video" onclick="https://www.youtube.com/channel/UCLFhUH3tc6dCMKj4aO7omPg">
+                    <p>Смотерть видео</p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-play-circle"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                    </svg>
+                  </button>
+               </form>
+              
             </div>
           </div>
         </div>
@@ -110,38 +122,104 @@
 
         <div class="container__chanels">
           <img src="./img/news-rec.png" class="rectangle" alt="" />
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/news.svg" class="skills__img" />
-            </object>
+
+          <div class="chanels__row">
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/news.svg" class="skills__img" />
+              </object>
+            </div>
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/big-logo.svg" class="skills__img" />
+              </object>
+            </div>
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/kpua.svg" class="skills__img" />
+              </object>
+            </div>
           </div>
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/big-logo.svg" class="skills__img" />
-            </object>
-          </div>
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/kpua.svg" class="skills__img" />
-            </object>
-          </div>
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/delo.svg" class="skills__img" />
-            </object>
-          </div>
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/min-fin.svg" class="skills__img" />
-            </object>
-          </div>
-          <div class="chanel">
-            <object type="image/svg+xml" data="picture.svg">
-              <img src="./img/segodny.svg" class="skills__img" />
-            </object>
+          <div class="chanels__row">
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/delo.svg" class="skills__img" />
+              </object>
+            </div>
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/min-fin.svg" class="skills__img" />
+              </object>
+            </div>
+            <div class="chanel">
+              <object type="image/svg+xml" data="picture.svg">
+                <img src="./img/segodny.svg" class="skills__img" />
+              </object>
+            </div>
           </div>
         </div>
       </div>
     </main>
+    <div class="overlay"></div>
+    <div class="modal">
+      <img src="./img/modal.png" alt="pop-Up" />
+      <div class="modal__forms">
+        <form action="">
+          <h2>Принять участие в Вебинаре</h2>
+          <label for="name">*Ваше имя</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autocomplete="off"
+            required
+          />
+
+          <label for="Phone">*Ваш телефон</label>
+          <input
+            type="text"
+            name="phone"
+            id="Phone"
+            autocomplete="off"
+            required
+            pattern="^[0-9]+$"
+          />
+
+          <label for="email">*Ваш Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            autocomplete="off"
+            required
+            pattern="^[a-zA-Z\s]+$"
+          />
+          <button type="submit" class="button">Принять участие</button>
+        </form>
+      </div>
+    </div>
+    <div class="mobile">
+      <ul>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-x close"
+          
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <li>Учавствовать</li>
+        <li>О нас</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
   </body>
 </html>
