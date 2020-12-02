@@ -447,14 +447,22 @@ header {
      
     }
 }
-
-.sources {
-    
+.section {
     background-image: url('./../img/map_istochniki.png');
+}
+.sources {
+    background-image: url('./../img/map_istochniki.png');
+  
     background-size: cover;
     background-repeat: no-repeat;
     background-size: center;
     position: relative;
+    .map {
+        position: absolute;
+        z-index: 50;
+        border: 1px solid black;
+        height: 100%;
+    }
     .background {
         position: absolute;
         width: 50%;
@@ -469,6 +477,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-bottom: 4em;
         @media only screen and (max-width: $break-point4) {
             flex-direction: column;
         }
@@ -692,3 +701,4 @@ header {
         z-index: 10;
     }
 }
+
