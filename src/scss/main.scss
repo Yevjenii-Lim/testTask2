@@ -46,12 +46,13 @@ header {
     @media only screen and (max-width: $break-point3) {
         max-width: 850px;
     }
-   /* @media only screen and (max-width: $break-point4) {
-        max-width: 750px;
+    .subtitle {
+        color: #75ACFF;
+        font-size: 1em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin: 0;
     }
-    @media only screen and (max-width: $break-point5) {
-        max-width: 600px;
-    }*/
 }
 .button {
     padding: 0.8em 2em;
@@ -701,4 +702,3 @@ header {
         z-index: 10;
     }
 }
-

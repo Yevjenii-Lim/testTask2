@@ -60,3 +60,154 @@
         }
     }
 }
+
+
+.form {
+    position: relative;
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #1D2B46;
+    }
+    .video {
+        position: absolute;
+        width: 60%;
+        right: 0;
+        height: 100%;
+        top: -75px;
+    }
+    .container {
+        .action {
+            width: 50%;
+            padding: 4em 0;
+            
+            p {
+                color: #75ACFF;
+                font-size: 1em;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            h3 {
+                margin-top: 10px;
+                font-size: 2.5em;
+                margin-bottom: 0;
+                color: white;
+                font-weight: lighter;
+            }
+            form {
+                margin-top: 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: auto;
+                margin-right: auto;
+                width: 70%;
+                input {
+                    outline: none;
+                    background-color: transparent;
+                    border: none;
+                    position: relative;
+                    z-index: 101;
+                    width: 100%;
+                    margin-top: 1em;
+                    color: white;
+                    font-size: 1em;
+                }
+              
+                [id=Phone]:focus:invalid ~ label::before {
+                    content: 'Неверный формат номера телефона';
+                    position: absolute;
+                    color: #F5841F;
+                    bottom: 100%;
+                }
+               label {
+                   position: relative;
+                   width: 100%;
+                    margin-top: 2em;
+                    display: block;
+                    color: rgb(207, 207, 207);
+               }
+                label::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        bottom: -200%;
+                        border-bottom:1px solid rgb(207, 207, 207);
+                        display: block;
+                       
+                    }
+            }
+            .button {
+                margin-top: 30px;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+
+.countdown {
+    padding: 3em 0;
+    position: relative;
+    .background {
+        position: absolute;
+        width: 50%;
+        height: 170%;
+        right: 0;
+        top: -110px;
+        background-color: #4069A7;
+        z-index: -1;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: lighter;
+            margin-top: 10px;
+            max-width: 300px;
+        }
+        .days {
+            display: flex;
+            justify-content: space-between;
+            
+            &__card {
+                background-color: white;
+                width: 150px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 15px;
+                .number {
+                    font-size: 5em;
+                    margin: 0;
+                }
+                .progressbar {
+                    width: 50%;
+                    height: 2px;
+                    position: relative;
+                    border-radius: 10px;
+                    border: 1px solid rgb(90, 90, 90);
+                    background-color: rgb(206, 206, 206);
+                    span {
+                        display: block;
+                        width: 30%;
+                        height: 100%;
+                        position: relative;
+                        background-color: blue;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
