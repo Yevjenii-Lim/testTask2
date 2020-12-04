@@ -7,13 +7,17 @@ $break-point6: 690px;
 $break-point7: 620px;
 $break-point8: 520px;
 $break-point9: 410px;
+
+
 * {
-    font-family: sans-serif;
+    font-family: 'Cera Pro';
+  
 }
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cera Pro';
   
 }
 header {
@@ -52,6 +56,9 @@ header {
         letter-spacing: 0.3em;
         text-transform: uppercase;
         margin: 0;
+        @media only screen and (max-width: $break-point4) {
+            font-size: 1em;
+        }
     }
 }
 .button {
